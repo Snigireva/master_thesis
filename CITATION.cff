@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "ms-lesion-ml: Reproducible MRI lesion and small-N classification pipeline"
+version: "1.0.0"
+message: "If you use this software, please cite it using the metadata below."
+authors:
+  - family-names: Snihirova
+    given-names: Yelyzaveta
+date-released: "2025-09-22"
+license: MIT
+repository-code: "https://github.com/<your-org>/ms-lesion-ml"

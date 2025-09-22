@@ -1,47 +1,45 @@
-config_yaml = """data:
-table_csv: "/path/to/subjects.csv" # columns: id,label,path_mask (if using lesion features),site,age,sex,...
-id_col: "id"
-label_col: "label"
-nifti_mask_col: "path_mask" # optional; used when features.method == 'lesion_features'
+data:
+  table_csv: "/path/to/subjects.csv"   # columns: id,label,path_mask (if using lesion features),site,age,sex,...
+  id_col: "id"
+  label_col: "label"
+  nifti_mask_col: "path_mask"          # optional; used when features.method == 'lesion_features'
 
 features:
-method: "lesion_features" # options: 'lesion_features' | 'precomputed'
-columns: [] # used if method == 'precomputed'
-lesion:
-component_count: true # count connected components
-voxel_count: true # total lesion voxels
+  method: "lesion_features"            # options: 'lesion_features' | 'precomputed'
+  columns: []                          # used if method == 'precomputed'
+  lesion:
+    component_count: true              # count connected components
+    voxel_count: true                  # total lesion voxels
 
 cv:
-folds: 5
-repeats: 1
-random_state: 42
-stratify: true
+  folds: 5
+  repeats: 1
+  random_state: 42
+  stratify: true
 
 model:
-type: "gaussian_nb" # 'gaussian_nb' | 'multinomial_nb'
-oversample: false
+  type: "gaussian_nb"                  # 'gaussian_nb' | 'multinomial_nb'
+  oversample: false
 
 harmonisation:
-enable_combat: false # placeholder hook
-batch_col: "site"
+  enable_combat: false                 # placeholder hook
+  batch_col: "site"
 
 metrics:
-primary: ["accuracy", "balanced_accuracy", "sensitivity_macro", "specificity_macro"]
-secondary: ["precision_macro"]
+  primary: ["accuracy", "balanced_accuracy", "sensitivity_macro", "specificity_macro"]
+  secondary: ["precision_macro"]
 
 stability:
-bootstrap:
-enable: false
-n_boot: 200
-random_state: 42
-permutation:
-enable: false
-n_perm: 1000
-random_state: 42
+  bootstrap:
+    enable: false
+    n_boot: 200
+    random_state: 42
+  permutation:
+    enable: false
+    n_perm: 1000
+    random_state: 42
 
 output:
-dir: "./outputs"
-save_plots: true
-save_predictions: true
-"""
-(root / "config.example.yaml").write_text(config_yaml, encoding="utf-8")
+  dir: "./outputs"
+  save_plots: true
+  save_predictions: true
