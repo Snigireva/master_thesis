@@ -1,0 +1,3 @@
+id,label,path_mask,site,age,sex
+S01,0,/path/to/S01_mask.nii.gz,A,34,F
+S02,1,/path/to/S02_mask.nii.gz,B,29,M
