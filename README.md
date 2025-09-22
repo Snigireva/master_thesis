@@ -1,4 +1,6 @@
 # ms-lesion-ml (v1.0.0)
+THE CODE IS IN NOT FULL YET, BETA VERSION. 
+
 Reproducible pipeline for lesion quantification and small-N classification in MRI, adapted from project code by **Yelyzaveta Snihirova**. It provides stratified cross-validation, class-specific metrics (sensitivity/specificity), optional oversampling, and harmonised plotting. All configuration is YAML-based.
 
 > Research use only.
